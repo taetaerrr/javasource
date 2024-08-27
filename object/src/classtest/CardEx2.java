@@ -1,6 +1,6 @@
 package classtest;
 
-Arrays[]
+import java.util.Arrays;
 
 public class CardEx2 {
     public static void main(String[] args) {
@@ -42,7 +42,7 @@ public class CardEx2 {
         Card cards[] = { card1, card2, card3 };
 
         for (Card card : cards) {
-            System.out.println("kind " + card.getKind() + "number" + card.getNumber());
+            System.out.println("kind " + card.getKind() + ", number " + card.getNumber());
         }
     }
 }

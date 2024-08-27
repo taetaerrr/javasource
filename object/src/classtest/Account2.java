@@ -1,6 +1,6 @@
 package classtest;
 
-public class Account {
+public class Account2 {
     // 계좌번호(accountNO) : 101-11-12345
     // 계좌주(owner) : 홍길동
     // 잔액(balnce) : 1000000
@@ -8,7 +8,7 @@ public class Account {
     private String owner;
     private int balnce;
 
-    public Account(String accountNo, String owner, int balnce) {
+    public Account2(String accountNo, String owner, int balnce) {
         this.accountNo = accountNo;
         this.owner = owner;
         this.balnce = balnce;
@@ -43,6 +43,12 @@ public class Account {
 
     public String getOwner() {
         return owner;
+    }
+
+    // toString : 메소드 이름 //리턴타입이 String
+    @Override
+    public String toString() {
+        return "Account2 [accountNo=" + accountNo + ", owner=" + owner + ", balnce=" + balnce + "]";
     }
 
 }

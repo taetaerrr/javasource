@@ -1,4 +1,4 @@
-package classtest;
+package extendstest;
 
 public class Account {
     // 계좌번호(accountNO) : 101-11-12345
