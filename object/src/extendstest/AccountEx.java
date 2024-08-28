@@ -2,19 +2,46 @@ package extendstest;
 
 public class AccountEx {
     public static void main(String[] args) {
-        CheckingAccount checkingAccount = new CheckingAccount(111 - 11, 홍길동, 1000000, 222 - 22);
+        CheckingAccount checkingAccount = new CheckingAccount("111-11", "홍길동", 1000000, "222-22");
 
         // 입금하다
         checkingAccount.deposit(100000);
-        super(accountNO, owner, balance);
-        this.cardNo = cardNo;
+        System.out.println("현재 잔액 : " + checkingAccount.getBalnce());
+
+        //
+        int balance = checkingAccount.pay("222-22", 20000);
+        System.out.println("현재 잔액 : " + balance);
+        System.out.println("=================================================");
+
+        // 인스턴스 생성
+        CreditLineAccount creditLineAccount = new CreditLineAccount("333-33", "현빈", 1000000, 5000000);
+        System.out.println("마이너스 통장 계좌 잔액 확인 : " + creditLineAccount.getBalnce());
+
+        balance = creditLineAccount.withdraw(4000000);
+        System.out.println("현재 잔액 : " + balance);
+
+        System.out.println("===================================================");
+        BonusPointAccount bonusPointAccount = new BonusPointAccount("444-55", "김지수", 0);
+        System.out.println("현재 보너스 점수 : " + bonusPointAccount.getBounsPoint());
+
+        bonusPointAccount.deposit(2000000);
+        System.out.println("현재 잔액 " + bonusPointAccount.getBalnce());
+        System.out.println("현재 보너스 점수 : " + bonusPointAccount.getBounsPoint());
+
+        System.out.println("===================================================");
+        CheckingTrafficCardAccount cardAccount = new CheckingTrafficCardAccount("555-66", "김수용", 100000, "333-33");
+        System.out.println(cardAccount.isHasTrafficCard() ? "교통카드 기능 있음" : "교통카드 기능 없음");
+
+        // 교통카드 기능 추가
+        cardAccount.setHasTrafficCard(true);
+
+        // 교통비 지불
+        balance = cardAccount.payTrafficCard("333-33", 2400);
+        if (balance == -1) {
+            System.out.println("교통카드 기능이 없습니다.");
+        } else {
+            System.out.println("교통비 지불 후 잔액 : " + balance);
+        }
     }
 
-    // 사용금액을 지불한다
-    // pay() : 사용금액, 카드번호
-    // 카드번호 일치 시 금액 인출
-    int pay(String cardNo, int amount) {
-        if (cardNo.equals(this.cardNo))
-            return -1;
-    }
 }

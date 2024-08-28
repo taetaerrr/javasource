@@ -33,6 +33,10 @@ public class Account {
         return balnce;
     }
 
+    public void setBalnce(int balnce) {
+        this.balnce = balnce;
+    }
+
     public int getBalnce() {
         return balnce;
     }

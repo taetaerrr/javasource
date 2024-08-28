@@ -14,8 +14,6 @@ public class ChildEx {
         child.print(); // 부모 메소드 호출 가능
         child.play(); // 자식 메소드 호출
 
-        child.
-
     }
 
 }
