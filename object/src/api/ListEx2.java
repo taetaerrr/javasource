@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ListEx2 {
     public static void main(String[] args) {
-        List<Member> list = new ArrayList()<>();   
+        List<Member> list = new ArrayList<>();
 
         list.add(new Member("hong123", "홍길동"));
         list.add(new Member("hong124", "김길동"));
@@ -18,5 +18,10 @@ public class ListEx2 {
         System.out.println(list.remove(2));
 
         System.out.println(list);
+
+        for (Member member : list) {
+            String id = member.getId();
+            String name = member.getName();
+        }
     }
 }

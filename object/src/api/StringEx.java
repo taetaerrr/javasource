@@ -131,7 +131,7 @@ public class StringEx {
         System.out.println("j = " + j);
 
         // NumberFormatException
-        double d = Integer.parseInt("33.5");
+        double d = Double.parseDouble("33.5");
         System.out.println("d = " + d);
 
         // "true" ==> true
