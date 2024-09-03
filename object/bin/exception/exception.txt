@@ -32,3 +32,8 @@ finally : 예외 여부와 상관없이 무조건 수행해야할 구문 작성
     - 자원(sc.close()) 닫기
 
 
+
+1) Checked Exception(컴파일 시 예외 체크)
+    throw new Exception()
+1) UnChecked Exception(런타임 시 예외 체크)
+    throw new RunTimeException()
