@@ -27,7 +27,7 @@ public class SelectEx3 {
             if (rs.next()) {
                 // number => getInt() / varchar2 => getString() / date => getDate()
                 // () 안에는 컬럼 번호 or 컬럼명 가능
-                System.out.println("empno : " + rs.getInt(1));
+                System.out.println("empno : " + rs.getInt("empno"));
                 System.out.println("ename : " + rs.getString(2));
                 System.out.println("job : " + rs.getString(3));
                 System.out.println("mgr : " + rs.getInt(4));
